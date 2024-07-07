@@ -4,11 +4,17 @@ An Intuit Craft Demo project.
 
 ## Tech Stack
 Language: Java
+
 Framework: Springboot
+
 Database: PostgreSQL
+
 Caching: Redis
+
 Message Broker: RabbitMQ
+
 Runtime Environment: Docker
+
 Hosting: Github
 
 
