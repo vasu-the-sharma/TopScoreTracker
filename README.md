@@ -1,5 +1,16 @@
 # TopScoreTracker
-Intuit Craft Demo project
+An Intuit Craft Demo project.
+
+
+## Tech Stack
+Language: Java
+Framework: Springboot
+Database: PostgreSQL
+Caching: Redis
+Message Broker: RabbitMQ
+Runtime Environment: Docker
+Hosting: Github
+
 
 ## Assumptions 
 1. Topic Simulation: Scores are published using a flat file, POST API, or RabbitMQ.
@@ -13,7 +24,8 @@ Intuit Craft Demo project
 9. Availability: PostgreSQL and Redis are always accessible.
 10. Internal APIs not requiring data validation, authentication, or authorization.
 
-## Flow 
+
+## Data Flow 
 1. Admins create a game and register it with the Game service -> Assumption
     * Upon a player completing a game, the Game service publishes the score to our Leaderboard service.
     * Whenever a game is played, a corresponding leaderboard is available.
@@ -23,6 +35,7 @@ Intuit Craft Demo project
    A. RabbitMQ
    B. Post API
    C. Flat file ingestion
+
 
 ## Future Enhancements
 Real-time Updates: Implement WebSocket or Server-Sent Events (SSE) to push real-time updates to clients whenever the leaderboard changes.
@@ -53,6 +66,7 @@ Asynchronous Processing: Use message queues (RabbitMQ) to handle score ingestion
 
 Load Balancing: Deploy load balancers to distribute incoming requests evenly across multiple instances of the service.
 
+
 ## Points of Failure
 Single Points of Failure:
    1. Redis: If Redis goes down, the system's ability to quickly retrieve top scores will be impacted. Mitigate by using Redis clusters for high availability.
@@ -68,20 +82,14 @@ Service Downtime: If any service instance goes down, it can affect the overall s
 
 Data Consistency: Inconsistencies between Redis cache and PostgreSQL can lead to incorrect leaderboard data. Implement cache invalidation strategies and periodic synchronization.
 
-Confluence for LLD:
+
+## Links & Diagrams
+
+1. Confluence for LLD:
 https://vasusharma.atlassian.net/wiki/spaces/SD/pages/65712/Craft+Demo+TOP+SCORER+TRACKER+-+Low+Level+Design
 
-Data flow diagram:
+2. Data flow diagram:
 https://drive.google.com/file/d/1dBjBjDOwpwuPJU-vDfEVU7VUocm1ZHSr/view
 
-Class diagram:
+3. Class diagram:
 https://lucid.app/lucidchart/c499757c-04e9-4131-abbc-94d4921314b6/view?page=0_0&invitationId=inv_706c9dca-e041-4632-a303-64736a36df2d#
-
-## Tech Stack
-Language: Java
-Framework: Springboot
-Database: PostgreSQL
-Caching: Redis
-Message Broker: RabbitMQ
-Runtime Environment: Docker
-Hosting: Github
