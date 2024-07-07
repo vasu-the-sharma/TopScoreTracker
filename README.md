@@ -31,10 +31,11 @@ Hosting: Github
     * Whenever a game is played, a corresponding leaderboard is available.
 2. Upon addition of new scores, the leaderboard is dynamically updated.
 3. After a game has been played, at least once, the top N player details can be fetched at any given time.
-4. You can ingest the score via three ways:
+4. The scores generated are lexographically based on PlayerId and scores are printed game wise.
+5. You can ingest the score via three ways:
    A. RabbitMQ
    B. Post API
-   C. Flat file ingestion
+   C. Flat file
 
 
 ## Future Enhancements
