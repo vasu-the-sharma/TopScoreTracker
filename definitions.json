@@ -1,0 +1,43 @@
+{
+  "rabbit_version": "3.8.0",
+  "users": [{
+    "name": "tracker",
+    "password_hash": "PASSWORD_HASH",
+    "hashing_algorithm": "rabbit_password_hashing_sha256",
+    "tags": "administrator"
+  }],
+  "vhosts": [{
+    "name": "/"
+  }],
+  "permissions": [{
+    "user": "tracker",
+    "vhost": "/",
+    "configure": ".*",
+    "write": ".*",
+    "read": ".*"
+  }],
+  "queues": [{
+    "name": "scoreQueue",
+    "vhost": "/",
+    "durable": true,
+    "auto_delete": false,
+    "arguments": {}
+  }],
+  "exchanges": [{
+    "name": "scoreExchange",
+    "vhost": "/",
+    "type": "topic",
+    "durable": true,
+    "auto_delete": false,
+    "internal": false,
+    "arguments": {}
+  }],
+  "bindings": [{
+    "source": "scoreExchange",
+    "vhost": "/",
+    "destination": "scoreQueue",
+    "destination_type": "queue",
+    "routing_key": "track_score.*",
+    "arguments": {}
+  }]
+}

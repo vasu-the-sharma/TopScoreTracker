@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.intuit.topscorerservice.dao.repository.impl.PlayerScoreRepositoryImplTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.810 s -- in com.intuit.topscorerservice.dao.repository.impl.PlayerScoreRepositoryImplTest
