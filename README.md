@@ -100,3 +100,5 @@ https://drive.google.com/file/d/1dBjBjDOwpwuPJU-vDfEVU7VUocm1ZHSr/view
 
 3. Class diagram:
 https://lucid.app/lucidchart/c499757c-04e9-4131-abbc-94d4921314b6/view?page=0_0&invitationId=inv_706c9dca-e041-4632-a303-64736a36df2d#
+
+4. PPT link: https://www.canva.com/design/DAGKLJ029B4/q5I9CYrAZQM_dSL-MY9nUw/edit?utm_content=DAGKLJ029B4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
